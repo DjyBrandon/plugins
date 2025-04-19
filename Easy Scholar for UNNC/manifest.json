@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Easy Scholar for UNNC",
+    "version": "1.0",
+    "description": "A Chrome extension to help you identify the paper and score that exists in the UNNC ESI Journal List",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "lib/jquery-3.3.1.min.js",
+                "lib/papaparse.min.js",
+                "index.js"
+            ],
+            "matches": [
+                "https://*/*",
+                "http://*/*"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/brandon.png"
+        }
+    },
+    "icons": {
+        "16": "images/brandon.png"
+    }
+}
